@@ -1,0 +1,11 @@
+# Dossiers Python compilés
+__pycache__/
+*.pyc
+
+# Environnement virtuel
+venv/
+.env
+
+# Fichiers système (Windows / Mac)
+Thumbs.db
+.DS_Store
