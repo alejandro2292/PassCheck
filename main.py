@@ -15,7 +15,7 @@ def has_digit(password: str) -> bool:
 
 #Check for special characters
 def has_special(password: str) -> bool:
-    special_char = "!@#$%^&*()-_=+[]{};:,<.>/?\\|`~"
+    special_char = "!@#€$£%^&*()-_=+[]{};:,<.>/?\\|`~"
     return any(c in special_char for c in password)
 
 
@@ -23,13 +23,28 @@ def has_special(password: str) -> bool:
 if __name__ == "__main__":  
 
     password = input('Enter your password : ') #Password recovery
+    score = 0 #final password strength score
 
-    #Print password analysis for the user
-    print("\nPassword analysis : ")
-    print(f"Contains uppercase letter ? {has_upper(password)}")
-    print(f"Contains lower letter ? {has_lower(password)}")
-    print(f"Contains digit ? {has_digit(password)}")
-    print(f"Contains special character ? {has_special(password)}")
+    #Add points for character types in the password
+    if has_upper(password):
+        score += 1
+    if has_lower(password):
+        score += 1
+    if has_digit(password):
+        score += 1
+    if has_special(password):
+        score += 1
+
+    
+    #Add point for password lenght
+    if 8 <= len(password) <= 12:
+        score += 2
+    elif 13 <= len(password) <= 16:
+        score += 4
+    elif len(password) > 16:
+        score += 7
 
 
+
+print(score)
 
