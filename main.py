@@ -46,5 +46,11 @@ if __name__ == "__main__":
 
 
 
-print(score)
+    #Penalize three consecutive identical characters
+    for i in range(len(password)-2):
+        if password[i] == password[i+1] == password[i+2]:
+            score -= 1
+
+
+print(score)    
 
