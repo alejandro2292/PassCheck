@@ -52,5 +52,13 @@ if __name__ == "__main__":
             score -= 1
 
 
-print(score)    
+    #Evaluate password strength based on the final score
+    if score <= 3:
+        print("You’re asking for your account to get hacked.")
+    elif score <= 6:
+        print('It’s a good start, but you should make it stronger.')
+    elif score <= 10:
+        print('Very solid password.')
+    else:
+        print('What is this password, are you paranoid or did you fall asleep on the keyboard?')
 
