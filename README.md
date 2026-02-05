@@ -16,6 +16,5 @@ Currently, the program only checks basic rules:
 In the future, the program may include:
   - Checking passwords against common password lists (rockyou.txt, etc.).
   - Estimating the time needed to crack the password via brute force.
-  - Using Python libraries like zxcvbn for more advanced analysis.
-  - Giving automatic recommendations to improve weak passwords.
+  - Giving automatic recommendations to improve weak passwords. ✅
   - Maybe even adding a small web interface (Flask) or GUI (Tkinter) for a more interactive tool.
